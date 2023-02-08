@@ -1,0 +1,101 @@
+.mavasa__home{
+    position: relative;
+    height: 100vh;
+}
+.mavasa__home-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0,0,0,.50);
+}
+.mavasa__home-body{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    animation: 1s ease-out 0s 1 verticalAnimation;
+}
+.mavasa__home-body>span:first-child{
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+}
+.mavasa__home-body p{
+    font-size: 1.2rem;
+    color: white;
+}
+.mavasa__home-body p fa-icon{
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+.mavasa__home-footer{
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    flex-direction: column;
+    align-items: center;
+}
+.mavasa__home-footer>div:first-child{
+    border: 1px solid white;
+    width: 26%;
+    margin-bottom: 10px;
+}
+.mavasa__home-footer>div:nth-child(2){
+    display: flex;
+    height: calc(100% - 75%);
+    justify-content: space-around;
+    width: 30%;
+}
+.mavasa__home-footer>div:nth-child(2)>div:first-child{
+    animation: 1s ease-out 0.1s 1 verticalAnimation;
+}
+.mavasa__home-footer>div:nth-child(2)>div:nth-child(2){
+    animation: 1s ease-out 0.3s 1 verticalAnimation;
+}
+.mavasa__home-footer>div:nth-child(2)>div:nth-child(3){
+    animation: 1s ease-out 0.35s 1 verticalAnimation;
+}
+.mavasa__home-icon-container{
+    background-color: white;
+    width: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.mavasa__home-icon-container fa-icon{
+    font-size: 1.5rem;
+}
+/*Keyframe for Safari and Chrome*/
+@-webkit-keyframes verticalAnimation{
+    0%{
+        -webkit-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform:translateY(100%);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform:translateY(0);
+    }
+}
+/*Transitions*/
+@keyframes verticalAnimation{
+    0%{
+        -ms-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100%{
+        -ms-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform:translateY(0);
+    }
+}
