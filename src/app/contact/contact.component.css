@@ -1,0 +1,42 @@
+.contact{
+    padding: 25px;
+    background-color: #edf6f7;
+    max-height: 896px;
+    scroll-margin-top: 60px;
+}
+.contact__send-button--text-aling{
+    text-align: center;
+    margin-top: 20px;
+}
+.contact__important-information{
+    text-align: end;
+    margin-top: 10px;
+}
+.contact__important-data{
+    color:red;
+}
+.contact p{
+    color:#18519d
+}
+.contact__titles{
+    font-weight: bold;
+    font-size: 2rem;
+}
+@media screen and (min-width:992px){
+    .contact{
+        padding: 2vw 4vw;
+    }
+    .contact>p{
+        text-align: center;
+    }
+    .contact form{
+        width: 60vw;
+        margin: auto;
+    }
+}
+@media screen and (min-width:1400px){
+    .contact form{
+        width: 40vw;
+        margin: auto;
+    }
+}

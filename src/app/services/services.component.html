@@ -1,0 +1,14 @@
+<section class="services mavasa__section" id="services">
+    <p class="services__titles">Nuestros servicios</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3" *ngFor="let service of services;let i = index">
+            <div class="services__service" appObserverVisibility [debounceTime]="100" (visible)="onElementVisibleServices($event)">
+                <div [ngStyle]="getServiceStyle(service)" class="services__service-image"></div>
+                <div class="services__service-description">
+                    <p class="services__subtitles services__titles--margin-bottom">{{service.title}}</p>
+                    <span>{{service.description}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

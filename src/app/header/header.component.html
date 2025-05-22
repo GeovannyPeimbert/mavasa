@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary header navbar-dark" id="header">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">
+        <img src="assets/imgs/logo.svg" alt="logo" width="100" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mavasaNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Menú" (click)="changeheaderStyle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mavasaNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" (click)="changeMenuSelected($event)" [ngClass]="{'header__option--selected': currentActive === 1}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" (click)="changeMenuSelected($event)" [ngClass]="{'header__option--selected': currentActive === 2}">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services" (click)="changeMenuSelected($event)" [ngClass]="{'header__option--selected': currentActive === 3}">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" (click)="changeMenuSelected($event)" [ngClass]="{'header__option--selected': currentActive === 4}">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery" (click)="changeMenuSelected($event)" [ngClass]="{'header__option--selected': currentActive === 5}">Galería</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>

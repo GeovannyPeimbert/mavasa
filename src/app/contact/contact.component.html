@@ -1,0 +1,75 @@
+<section class="contact mavasa__section" id="contact">
+    <p class="contact__titles">Contáctanos</p>
+    <form [formGroup]="contactForm"  class="needs-validation">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Nombre" formControlName="name" required>
+                        <label for="name">Nombre <span class="contact__important-data">*</span></label>
+                        <div class="invalid-feedback">
+                            Favor de ingresar un nombre.
+                        </div>
+                        <!--<div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)" class="alert alert-danger">
+                            <div *ngIf="contactForm.controls['name'].errors?.['required']">
+                                Favor de ingresar un nombre.
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="surname" placeholder="Apellido(s)" formControlName="surname">
+                        <label for="surname">Apellido(s)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="tu-correo@ejemplo.com" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}?">
+                        <label for="email">Correo electrónico</label>
+                        <div *ngIf="contactForm.value.email != ''" class="invalid-feedback">
+                            Favor de ingresar un correo electrónico válido.
+                        </div>
+                    </div>
+                    <!--<div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="notEmail" [(ngModel)]="haveEmail">
+                        <label class="form-check-label" for="notEmail">No cuento con correo electrónico</label>
+                    </div>-->
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="phone" placeholder="Teléfono" pattern="^[0-9]{10}$" formControlName="phone" required>
+                        <label for="phone">Teléfono celular <span class="contact__important-data">*</span></label>
+                        <div *ngIf="contactForm.value.phone == ''" class="invalid-feedback">
+                            Favor de ingresar un número de teléfono celular.
+                        </div>
+                        <div *ngIf="contactForm.value.phone != ''" class="invalid-feedback">
+                            Favor de ingresar un número de teléfono celular válido.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Expresa tu duda aquí" id="questions" style="height: 100px" formControlName="doubts" required></textarea>
+                        <label for="questions">¿En qué podemos ayudar? <span class="contact__important-data">*</span></label>
+                        <div class="invalid-feedback">
+                            Favor de indicarnos en que podemos ayudarte.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 contact__send-button--text-aling">
+                    <button type="submit" class="btn btn-primary" (click)="sendEmail()">Enviar</button>
+                </div>
+                <div class="col-12 contact__important-information">
+                    <span class="contact__important-data">*</span><span> Campos obligatorios</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

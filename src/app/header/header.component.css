@@ -1,0 +1,28 @@
+.header{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    
+}
+.header__option--selected{
+    border-bottom: 1px solid white;
+    color: white;
+}
+.navbar{
+    transition: background-color 0.5s ease;
+}
+.navbar-toggler{
+    border:none;
+}
+.header--show{
+    background-color: #353535;
+    transition: background-color 0.5s ease;
+}
+@media screen and (min-width:992px){
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: end;
+        padding-right: 5vw;
+    }
+}
